@@ -43,6 +43,7 @@ Item* myMinimapMenu;
 Item* myBgStyleMenu;
 Item* myStatusMenu;
 Item* myEditMenu;
+Item* myPaletteMenu;
 
 UpdateFunction myUpdateFunctions[NUM_PROPERTIES];
 
@@ -387,6 +388,10 @@ void init(Item* menu)
 	sep(hHelp);
 	add(hHelp, SHOW_ABOUT, "About...");
 
+	Item* hPalette = newMenu();
+	add(hPalette, OPEN_DIALOG_PALETTE, "Open Palette");
+	myPaletteMenu = hPalette;
+
 	// Top level menu.
 	sub(menu, hFile, "File");
 	sub(menu, hEdit, "Edit");
@@ -396,7 +401,7 @@ void init(Item* menu)
 	sub(menu, hAudio, "Audio");
 	sub(menu, myViewMenu, "View");
 	sub(menu, hHelp, "Help");
-
+	sub(menu, myPaletteMenu, "Palette");
 	update(ALL_PROPERTIES);
 }
 

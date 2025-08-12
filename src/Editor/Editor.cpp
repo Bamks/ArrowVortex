@@ -36,6 +36,7 @@
 #include <Managers/ChartMan.h>
 #include <Managers/NoteMan.h>
 #include <Managers/NoteskinMan.h>
+#include <Managers/PaletteMan.h>
 
 #include <Dialogs/SongProperties.h>
 #include <Dialogs/ChartList.h>
@@ -50,6 +51,7 @@
 #include <Dialogs/WaveformSettings.h>
 #include <Dialogs/Zoom.h>
 #include <Dialogs/CustomSnap.h>
+#include <Dialogs/Palette.h>
 
 namespace Vortex {
 
@@ -213,6 +215,7 @@ void init()
 	TempoMan::create();
 	ChartMan::create();
 	NotesMan::create();
+	PaletteMan::create();
 
 	// Create the editor components.
 	Shortcuts::create();
@@ -283,6 +286,7 @@ void shutdown()
 	SimfileMan::destroy();
 	NoteskinMan::destroy();
 	StyleMan::destroy();
+	PaletteMan::destroy();
 
 	// Destroy goo last, because some editor components use goo graphics objects.
 	GuiMain::shutdown();
@@ -749,6 +753,8 @@ void handleDialogOpening(DialogId id, recti rect)
 		dlg = new DialogZoom; break;
 	case DIALOG_CUSTOM_SNAP:
 		dlg = new DialogCustomSnap; break;
+	case DIALOG_PALETTE:
+		dlg = new DialogPalette; break;
 	};
 
 	dlg->setId(id);

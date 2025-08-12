@@ -412,6 +412,8 @@
     <ClCompile Include="..\..\src\System\Mixer.cpp" />
     <ClCompile Include="..\..\src\System\System.cpp" />
     <ClCompile Include="..\..\src\System\Thread.cpp" />
+    <ClCompile Include="..\..\src\Dialogs\Palette.cpp" />
+    <ClCompile Include="..\..\src\Managers\PaletteMan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Core\ByteStream.h" />
@@ -464,6 +466,7 @@
     <ClInclude Include="..\..\src\Dialogs\TempoBreakdown.h" />
     <ClInclude Include="..\..\src\Dialogs\WaveformSettings.h" />
     <ClInclude Include="..\..\src\Dialogs\Zoom.h" />
+    <ClInclude Include="..\..\src\Dialogs\Palette.h" />
     <ClInclude Include="..\..\src\Editor\Action.h" />
     <ClInclude Include="..\..\src\Editor\Aubio.h" />
     <ClInclude Include="..\..\src\Editor\Butterworth.h" />
@@ -495,6 +498,7 @@
     <ClInclude Include="..\..\src\Managers\SimfileMan.h" />
     <ClInclude Include="..\..\src\Managers\StyleMan.h" />
     <ClInclude Include="..\..\src\Managers\TempoMan.h" />
+    <ClInclude Include="..\..\src\Managers\PaletteMan.h" />
     <ClInclude Include="..\..\src\Simfile\Chart.h" />
     <ClInclude Include="..\..\src\Simfile\Common.h" />
     <ClInclude Include="..\..\src\Simfile\NoteList.h" />

@@ -21,6 +21,7 @@
 #include <Managers/StyleMan.h>
 #include <Managers/SimfileMan.h>
 #include <Managers/TempoMan.h>
+#include <Managers/PaletteMan.h>
 
 #include <Dialogs/Dialog.h>
 
@@ -74,6 +75,8 @@ void Action::perform(Type action)
 		gEditor->openDialog(DIALOG_ZOOM);
 	CASE(OPEN_DIALOG_CUSTOM_SNAP)
 		gEditor->openDialog(DIALOG_CUSTOM_SNAP);
+	CASE(OPEN_DIALOG_PALETTE)
+		gEditor->openDialog(DIALOG_PALETTE);
 
 	CASE(EDIT_UNDO)
 		gSystem->getEvents().addKeyPress(Key::Z, Keyflag::CTRL, false);
